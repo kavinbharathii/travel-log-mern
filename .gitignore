@@ -1,16 +1,19 @@
 
 # dependencies
-
 /node_modules
 /build
 /.pnp
 .pnp.js
 
 # environmental variables
-
 .env
+/server/.env
+/client/.env
 
 # server
-
 /server/node_modules
 /server/build
+
+# client 
+/client/node_modules
+/client/build
