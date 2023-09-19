@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Map from 'react-map-gl';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+	return (
+		<Map
+			mapboxAccessToken={ process.env.REACT_APP_MAPBOX_TOKEN }
+			initialViewState={{
+				latitude: 11.0772,
+				longitude: 76.9888,
+				zoom: 5
+			}}
+			style={{ width: '100vw', height: '100vh' }}
+			mapStyle="mapbox://styles/cipherdot/clmq0e0of024v01r76cvz4626"
+		/>
+	);
 }
 
-export default App;
+export default App
